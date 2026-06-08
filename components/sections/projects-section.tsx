@@ -19,7 +19,7 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <div className="space-y-8 md:space-y-10">
+        <div className="space-y-4 md:space-y-5">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.title}
@@ -81,59 +81,59 @@ function ProjectCard({
         const y = ((event.clientY - bounds.top) / bounds.height) * 100;
         setPointer({ x, y });
       }}
-      className="group overflow-hidden rounded-3xl border border-zinc-800/80 bg-zinc-950/45 shadow-[0_24px_80px_-48px_rgba(0,0,0,0.95)] backdrop-blur-md"
+      className="group mx-auto max-w-5xl overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950/45 shadow-[0_14px_40px_-32px_rgba(0,0,0,0.95)] backdrop-blur-md"
       style={{
         backgroundImage: `radial-gradient(circle at ${pointer.x}% ${pointer.y}%, rgba(255,255,255,0.06), rgba(255,255,255,0) 40%)`,
       }}
     >
-      <div className="grid gap-8 p-5 md:grid-cols-[1.2fr_1fr] md:p-6">
-        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-black">
+      <div className="grid gap-4 p-3 md:grid-cols-[1fr_1fr] md:p-4">
+        <div className="relative aspect-[16/9] overflow-hidden rounded-lg bg-black">
           <Image
             src={image}
             alt={title}
             fill
-            sizes="(max-width: 768px) 100vw, 60vw"
+            sizes="(max-width: 768px) 100vw, 52vw"
             className="object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105"
           />
         </div>
-        <div className="flex flex-col justify-between gap-6 p-2 md:p-4">
-          <div className="space-y-5">
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-full border border-zinc-700/80 bg-zinc-900/70 px-3 py-1 text-[10px] tracking-[0.18em] text-zinc-300 uppercase">
+        <div className="flex flex-col justify-between gap-4 p-1">
+          <div className="space-y-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full border border-zinc-700/80 bg-zinc-900/70 px-2 py-0.5 text-[8px] tracking-[0.18em] text-zinc-300 uppercase">
                 Featured Project
               </span>
-              <span className="text-xs tracking-[0.15em] text-zinc-500 uppercase">{projectType}</span>
+              <span className="text-[10px] tracking-[0.15em] text-zinc-500 uppercase">{projectType}</span>
             </div>
-            <h3 className="font-editorial text-3xl leading-tight text-zinc-100 md:text-4xl">{title}</h3>
-            <p className="text-zinc-300">{summary}</p>
-            <div className="space-y-2">
-              <p className="text-[11px] tracking-[0.18em] text-zinc-500 uppercase">Key Features</p>
-              <ul className="grid gap-2 sm:grid-cols-2">
+            <h3 className="font-editorial text-xl leading-tight text-zinc-100 md:text-2xl">{title}</h3>
+            <p className="text-xs text-zinc-300 md:text-sm">{summary}</p>
+            <div className="space-y-1.5">
+              <p className="text-[9px] tracking-[0.18em] text-zinc-500 uppercase">Key Features</p>
+              <ul className="grid gap-1 sm:grid-cols-2">
                 {features.map((feature) => (
-                  <li key={feature} className="text-sm text-zinc-300">
+                  <li key={feature} className="text-[11px] text-zinc-300 md:text-xs">
                     <span className="mr-2 text-zinc-500">-</span>
                     {feature}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-zinc-700 px-3 py-1 text-[11px] tracking-[0.14em] text-zinc-400 uppercase"
+                  className="rounded-full border border-zinc-700 px-2 py-0.5 text-[9px] tracking-[0.14em] text-zinc-400 uppercase"
                 >
                   {tag}
                 </span>
               ))}
             </div>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             <a
               href={live}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-zinc-600 bg-zinc-800/80 px-4 py-2 text-xs tracking-[0.15em] text-zinc-100 uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-zinc-400 hover:bg-zinc-700"
+              className="rounded-full border border-zinc-600 bg-zinc-800/80 px-2.5 py-1 text-[10px] tracking-[0.14em] text-zinc-100 uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-zinc-400 hover:bg-zinc-700"
             >
               Live Demo
             </a>

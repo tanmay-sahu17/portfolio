@@ -26,14 +26,6 @@ export function ContactSection() {
           >
             Download Resume
           </a>
-          <a
-            href="https://www.linkedin.com/in/tanmay-sahu-3400422b5/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900/60 px-6 py-2 text-xs font-semibold tracking-[0.16em] text-zinc-200 uppercase transition hover:-translate-y-0.5 hover:border-zinc-600"
-          >
-            Book a Quick Chat
-          </a>
         </div>
         <div className="flex flex-wrap gap-6 pt-4">
           <UnderlineLink href="mailto:tanmaysahu015@gmail.com">tanmaysahu015@gmail.com</UnderlineLink>

@@ -161,6 +161,57 @@ export const projects: Project[] = [
     live: "https://github.com/tanmay-sahu17?tab=repositories",
   },
   {
+    title: "Hand Gesture Detection System",
+    projectType: "Machine Learning Project",
+    summary:
+      "ML-based hand gesture detection system that identifies hand poses in real time and maps gestures to computer actions for touch-free interaction.",
+    features: [
+      "Real-time hand landmark tracking",
+      "Gesture classification pipeline",
+      "Touchless command control mapping",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80",
+    tags: ["Python", "OpenCV", "MediaPipe", "Machine Learning"],
+    caseStudy: "https://github.com/tanmay-sahu17?tab=repositories",
+    github: "https://github.com/tanmay-sahu17",
+    live: "https://github.com/tanmay-sahu17?tab=repositories",
+  },
+  {
+    title: "Jewellery Application & App",
+    projectType: "E-commerce Web & Mobile Platform",
+    summary:
+      "Jewellery-focused shopping platform across web and mobile with elegant product discovery, secure checkout, and order lifecycle tracking.",
+    features: [
+      "Curated catalogue with category and filter flow",
+      "Cart, wishlist, and secure checkout experience",
+      "Order tracking and user profile management",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1600&q=80",
+    tags: ["Next.js", "React Native", "Node.js", "MongoDB"],
+    caseStudy: "https://github.com/tanmay-sahu17?tab=repositories",
+    github: "https://github.com/tanmay-sahu17",
+    live: "https://github.com/tanmay-sahu17?tab=repositories",
+  },
+  {
+    title: "Portfolio Website",
+    projectType: "Current Live Portfolio (This Website)",
+    summary:
+      "Ye wahi website hai jo tum abhi dekh rahe ho - haan, isko design se deployment tak maine hi banaya hai, with smooth navigation, polished animations, and practical recruiter-friendly sections.",
+    features: [
+      "Section navigation with quick jump links and scroll progress",
+      "Animated hero, text reveals, and interactive project cards",
+      "Responsive layout with SEO-friendly pages, robots, and sitemap",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1600&q=80",
+    tags: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+    caseStudy: "https://github.com/tanmay-sahu17?tab=repositories",
+    github: "https://github.com/tanmay-sahu17",
+    live: "https://github.com/tanmay-sahu17?tab=repositories",
+  },
+  {
     title: "Automatic Water Dispenser",
     projectType: "Embedded Automation Project",
     summary:
@@ -182,7 +233,7 @@ export const projects: Project[] = [
 export const techStack: TechStackCategory[] = [
   {
     title: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    items: ["React", "Next.js", "TypeScript", "JavaScript", "Flutter", "Tailwind CSS"],
   },
   {
     title: "Backend",

@@ -1,5 +1,53 @@
 import { FadeIn } from "@/components/ui/fade-in";
 import { techStack } from "@/lib/portfolio-data";
+import type { IconType } from "react-icons";
+import {
+  SiArduino,
+  SiDart,
+  SiExpress,
+  SiFlutter,
+  SiGit,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPhp,
+  SiPostman,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiVsco,
+} from "react-icons/si";
+import {
+  TbApi,
+  TbBolt,
+  TbCircuitResistor,
+  TbLock,
+} from "react-icons/tb";
+
+const techIcons: Record<string, IconType> = {
+  React: SiReact,
+  "Next.js": SiNextdotjs,
+  TypeScript: SiTypescript,
+  JavaScript: SiJavascript,
+  "Tailwind CSS": SiTailwindcss,
+  "Node.js": SiNodedotjs,
+  "Express.js": SiExpress,
+  PHP: SiPhp,
+  "REST APIs": TbApi,
+  Authentication: TbLock,
+  Flutter: SiFlutter,
+  Dart: SiDart,
+  Arduino: SiArduino,
+  Sensors: TbCircuitResistor,
+  "Automation Logic": TbBolt,
+  MySQL: SiMysql,
+  MongoDB: SiMongodb,
+  Git: SiGit,
+  Postman: SiPostman,
+  "VS Code": SiVsco,
+};
 
 export function TechStackSection() {
   return (
@@ -24,8 +72,13 @@ export function TechStackSection() {
                 {category.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-zinc-700 px-3 py-1 text-[11px] tracking-[0.14em] text-zinc-300 uppercase"
+                    className="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-3 py-1 text-[11px] tracking-[0.14em] text-zinc-300 uppercase"
                   >
+                    {(() => {
+                      const Icon = techIcons[item];
+
+                      return Icon ? <Icon className="text-sm text-zinc-400" aria-hidden="true" /> : null;
+                    })()}
                     {item}
                   </span>
                 ))}
